@@ -4,10 +4,7 @@ from datetime import datetime
 app = Flask(__name__)
 
 
-@app.route('/', methods=['POST', 'GET'])
-def index():
-    return redirect("/calories")
-
+# - Functions --------------------------------------------------
 
 def calculate_bmr(gender, weight, height, age, body_type):
     if gender == 'female':
@@ -18,6 +15,13 @@ def calculate_bmr(gender, weight, height, age, body_type):
 
 def calulate_strength_training(intensity, frequency, duration):
     return round(intensity * frequency * duration)
+
+
+# - Routes --------------------------------------------------
+
+@app.route('/', methods=['POST', 'GET'])
+def index():
+    return redirect("/calories")
 
 
 @app.route('/calories', methods=['GET', 'POST'])
@@ -55,6 +59,8 @@ def calories():
     else:
         return render_template('calories.html')
 
+
+# - Program Startup ----------------------------------------------------
 
 if __name__ == "__main__":
     app.run(debug=True)
