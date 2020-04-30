@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Calories</title>
+{% endblock %}
+
+{% block body %}
+<h2>You provided these details:</h2>
+<div> 
+    You are {{ gender }}
+</div>
+<br>
+<div> 
+    Weight: {{ weight }}
+</div>
+<br>
+<div> 
+    Height: {{ height }}
+</div>
+<br>
+<div> 
+    Age: {{ age }}
+</div>
+<br>
+<div> 
+    Body Type: {{ body_type }}
+</div>
+<br>
+
+<h3>Your BMR is {{ bmr }}</h3>
+
+<h3>Your training is {{ training }}</h3>
+
+
+<div>
+    <a href='/calories'>Back</a>
+</div>
+
+
+{% endblock %}

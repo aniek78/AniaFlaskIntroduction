@@ -1,6 +1,7 @@
 body, html {
     margin: 0;
-    font-family: sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgba(81, 231, 181, 0.877);
 }
 
 .content {
@@ -9,11 +10,11 @@ body, html {
 }
 
 table, td, th {
-    border: 1px solid #aaa;
+    border: 1px solid rgba(81, 231, 181, 0.877);
 }
 
 table {
-    border-collapse: collapse;
+    align-content: center;
     width: 100%;
 }
 
@@ -27,9 +28,14 @@ td {
 }
 
 .form {
+    align-content: center;
     margin-top: 20px;
+    background-color: rgba(81, 231, 181, 0.877);
 }
 
 #content {
+    box-align: center;
     width: 70%;
+    background-color: rgba(81, 231, 181, 0.877);
+    
 }
